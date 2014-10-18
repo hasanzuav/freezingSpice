@@ -1,2 +1,30 @@
+<!--This way works in FireFox, but not in Google-->
 <script src="processing.js"></script> 
 <canvas data-processing-sources="anything.pde"></canvas>
+
+<!--This way works in both FireFox and Google
+<script src="processing.js"></script> 
+<script type="text/processing" data-processing-target="mycanvas">
+// Setup the Processing Canvas
+void setup(){
+	size( 600, 600 );
+	background(102);
+	smooth();
+}
+
+// Main draw loop
+void draw(){
+  variableEllipse(mouseX,mouseY, pmouseX, pmouseY);
+}
+
+
+// Set circle's next destination
+void variableEllipse(int x, int y, int px, int py){
+	float speed = abs(x-px) + abs(y-py);
+	stroke(speed);
+	ellipse(x,y,speed,speed);
+}
+</script>
+<canvas id="mycanvas"></canvas>
+-->
+
