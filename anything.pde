@@ -1,21 +1,15 @@
+PImage b;
 
+/* @pjs preload="photo.png"; */
 
-// Setup the Processing Canvas
 void setup(){
-	size( 600, 600 );
-	background(102);
-	smooth();
+	size(1000,1000);
+	b = loadImage("photo.png");
+
 }
 
-// Main draw loop
 void draw(){
-  variableEllipse(mouseX,mouseY, pmouseX, pmouseY);
-}
+	background( 200 );
+	image(b, mouseX-b.width/2, mouseY-b.height/2);
 
-
-// Set circle's next destination
-void variableEllipse(int x, int y, int px, int py){
-	float speed = abs(x-px) + abs(y-py);
-	stroke(speed);
-	ellipse(x,y,speed,speed);
 }

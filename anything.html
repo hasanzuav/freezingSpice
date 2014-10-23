@@ -1,2 +1,24 @@
 <script src="processing.js"></script> 
+<!-- PDE in seperate file (does not work in Chrome)
 <canvas data-processing-sources="anything.pde"></canvas>
+-->
+<script type="text/processing" data-processing-target="mycanvas">
+<!-- Start PDE Code -->
+PImage b;
+
+/* @pjs preload="photo.png"; */
+
+void setup(){
+	size(1000,1000);
+	b = loadImage("photo.png");
+
+}
+
+void draw(){
+	background( 200 );
+	image(b, mouseX-b.width/2, mouseY-b.height/2);
+
+}
+<!-- End PDE Code -->
+</script>
+<canvas id="mycanvas"></canvas>
