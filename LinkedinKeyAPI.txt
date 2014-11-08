@@ -1,0 +1,17 @@
+Company:
+freezingSpice
+
+Application Name:
+prototypeOne
+
+API Key:
+7516rb8m6f8cdb
+
+Secret Key:
+spx0YiJyShhYMk0L
+
+OAuth User Token:
+b8de6e78-a40d-487c-838a-241b4db2b9d5
+
+OAuth User Secret:
+1d901020-e791-4581-b993-c45a18504478
